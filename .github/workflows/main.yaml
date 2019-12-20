@@ -80,5 +80,4 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-            #az storage blob upload-batch -s build -d \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME_2 }}
           az storage blob upload-batch -s build -d \$web --account-name ${{ steps.keyvault_secrets.outputs.storageAccountProd }}
